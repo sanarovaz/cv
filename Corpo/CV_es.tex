@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+
+% ---------- Encoding & fonts ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% ---------- Geometry ----------
+\usepackage[left=1.85in,right=0.8in,top=0.6in,bottom=0.7in]{geometry}
+
+% ---------- Packages ----------
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[expansion=false]{microtype}
+
+% ---------- Editable metadata ----------
+\newcommand{\cvname}{Santiago Rodríguez Vázquez}
+\newcommand{\cvdate}{%
+  \ifcase\month\or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or
+    Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi {/}\number\year}
+
+\newcommand{\pagenumcentered}{%
+  \hspace*{\dimexpr 0.5\paperwidth - \oddsidemargin - 1in\relax}%
+  \makebox[0pt][c]{\footnotesize\thepage}%
+}
+
+% ---------- Marginal section headers ----------
+\titleformat{\section}[leftmargin]
+  {\normalfont\bfseries\filright}
+  {}{0pt}{}
+\titlespacing{\section}{1.35in}{1.3em}{0.6em}
+
+% ---------- Page style ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%\fancyfoot[L]{\pagenumcentered}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+%  \fancyfoot[L]{\pagenumcentered}
+}
+
+% ---------- Spacing helpers ----------
+\setlength{\parindent}{0pt}
+\newcommand{\entrydate}[1]{\hfill{\small{#1}}}
+\newlist{cvitems}{itemize}{1}
+\setlist[cvitems]{leftmargin=1.2em,label=\textendash,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\grp}[1]{\smallskip{\itshape #1}\par\nopagebreak\vspace{1pt}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+% ================= HEADER =================
+{\LARGE\bfseries {\cvname}}
+
+\href{mailto:santiago@rodriguez-vazquez.com.ar}{santiago@rodriguez-vazquez.com.ar} | \href{https://sanarovaz.github.io}{sanarovaz.github.io} | \href{https://www.linkedin.com/in/srodriguezvazquez/?locale=en-US}{linkedin.com/srodriguezvazquez}
+\\
++54 3442 516481
+
+% ================= PERFIL =================
+\section{Perfil}
+Economista con sólida formación cuantitativa (Maestría en curso) y experiencia práctica en análisis de datos, gestión de bases financieras e investigación aplicada. Combina herramientas econométricas y de programación (R, Python, SQL, Stata) con experiencia previa en el sector corporativo. Perfil analítico con varios años de experiencia docente.
+
+% ================= FORMACIÓN =================
+\section{Formación}
+\textbf{Universidad de San Andrés}.\entrydate{2026--Presente}\\
+\textit{Maestría en Economía.}
+\begin{cvitems}
+  \item Cursado de economía aplicada, comercio internacional, macroeconomía y econometría aplicada / organización industrial.
+\end{cvitems}
+
+\smallskip
+\textbf{Universidad de Buenos Aires, Facultad de Ciencias Económicas}.\entrydate{2019--2025}\\
+\textit{Licenciatura en Economía.}
+\begin{cvitems}
+  \item Promedio: 8.03/10. Materias cursadas del ciclo de Actuario (Estadística Actuarial, Análisis Numérico).
+  \item Tesis de grado sobre los determinantes del financiamiento de startups espaciales, calificada con 10/10.
+\end{cvitems}
+
+% ================= EXPERIENCIA PROFESIONAL =================
+\section{Experiencia\\profesional}
+\textbf{Veritran}.\entrydate{2022--2023}\\
+\textit{Analista Financiero Jr.}
+\begin{cvitems}
+  \item Gestión de operaciones de cuentas a pagar para subsidiarias en Latinoamérica, Estados Unidos y Europa, garantizando un procesamiento preciso y oportuno.
+  \item Mantenimiento y actualización de bases de datos y registros financieros en NetSuite, dando soporte al reporting y al cierre mensual.
+\end{cvitems}
+
+% ================= INVESTIGACIÓN / ANÁLISIS DE DATOS =================
+\section{Investigación y\\análisis de datos}
+\textbf{Instituto Interdisciplinario de Economía Política (IIEP)}.\entrydate{2024--2026}\\
+\textit{Asistente de Investigación.}
+\begin{cvitems}
+  \item Construcción de una base de datos financiera de 156 multilatinas para un estudio financiado por el BID sobre expansión regional (\href{https://publications.iadb.org/es/multilatinas-en-movimiento-caracteristicas-motivaciones-y-lineamientos-de-politica}{Blyde et al., 2025}).
+  \item Aplicación de modelos estadísticos de redes (ERGM, QAP) en R para analizar datos a nivel firma sobre transferencia de conocimiento entre clústers tecnológicos.
+  \item Colaboración en investigación y redacción sobre la historia del sector espacial argentino.
+\end{cvitems}
+
+\smallskip
+\textbf{Proyecto independiente}, con Paulo Pascuini.\entrydate{2025--Presente}
+\begin{cvitems}
+  \item Análisis de patrones de financiamiento en 170 startups de nanosatélites y 410 rondas de inversión, estudiando el rol de la integración vertical y el perfil del inversor.
+\end{cvitems}
+
+% ================= DOCENCIA =================
+\section{Docencia}
+\textbf{Ayudante de Cátedra}, Universidad de San Andrés y Universidad de Buenos Aires.\entrydate{2022--Presente}
+\begin{cvitems}
+  \item Siete cuatrimestres como ayudante en cinco materias de economía (Microeconomía I y II, Economía Internacional, Economía Financiera, Desarrollo Económico), preparando material, dando clases y corrigiendo exámenes.
+\end{cvitems}
+
+% ================= HERRAMIENTAS =================
+\section{Herramientas}
+    R, Python. Manejo de SQL, Stata, Tableau Public. Algunos proyectos en \href{https://www.github.com/sanarovaz/}{GitHub}.
+\section{Idiomas}
+Español (nativo). Inglés (avanzado): Cambridge CAE, puntaje 198, 2017.
+
+\end{document}

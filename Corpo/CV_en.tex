@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+
+% ---------- Encoding & fonts ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% ---------- Geometry ----------
+\usepackage[left=1.85in,right=0.8in,top=0.6in,bottom=0.7in]{geometry}
+
+% ---------- Packages ----------
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[expansion=false]{microtype}
+
+% ---------- Editable metadata ----------
+\newcommand{\cvname}{Santiago Rodríguez Vázquez}
+\newcommand{\cvdate}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December\fi {/}\number\year}
+
+\newcommand{\pagenumcentered}{%
+  \hspace*{\dimexpr 0.5\paperwidth - \oddsidemargin - 1in\relax}%
+  \makebox[0pt][c]{\footnotesize\thepage}%
+}
+
+% ---------- Marginal section headers ----------
+\titleformat{\section}[leftmargin]
+  {\normalfont\bfseries\filright}
+  {}{0pt}{}
+\titlespacing{\section}{1.35in}{1.3em}{0.6em}
+
+% ---------- Page style ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%\fancyfoot[L]{\pagenumcentered}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+%  \fancyfoot[L]{\pagenumcentered}
+}
+
+% ---------- Spacing helpers ----------
+\setlength{\parindent}{0pt}
+\newcommand{\entrydate}[1]{\hfill{\small{#1}}}
+\newlist{cvitems}{itemize}{1}
+\setlist[cvitems]{leftmargin=1.2em,label=\textendash,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\grp}[1]{\smallskip{\itshape #1}\par\nopagebreak\vspace{1pt}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+% ================= HEADER =================
+{\LARGE\bfseries {\cvname}}
+
+\href{mailto:santiago@rodriguez-vazquez.com.ar}{santiago@rodriguez-vazquez.com.ar} | \href{https://sanarovaz.github.io}{sanarovaz.github.io} | \href{https://www.linkedin.com/in/srodriguezvazquez/?locale=en-US}{linkedin.com/srodriguezvazquez}
+\\
++54 3442 516481
+
+% ================= PROFILE =================
+\section{Profile}
+Economics professional with strong quantitative training (M.A. in progress) and hands-on experience in data analysis, financial database management, and applied research. Combines econometric and programming skills (R, Python, SQL, Stata) with prior corporate experience in financial operations. Analytical profile with several years of teaching experience.
+
+% ================= EDUCATION =================
+\section{Education}
+\textbf{Universidad de San Andrés}.\entrydate{2026--Present}\\
+\textit{M.A. in Economics.}
+\begin{cvitems}
+  \item Coursework in applied economics, international trade, macroeconomics, and applied
+        econometrics / industrial organization.
+\end{cvitems}
+
+\smallskip
+\textbf{Universidad de Buenos Aires, School of Economic Sciences}.\entrydate{2019--2025}\\
+\textit{B.A. in Economics.}
+\begin{cvitems}
+  \item GPA: 8.03/10. Coursework from the Actuarial program (Actuarial Statistics, Numerical Analysis).
+  \item Undergraduate thesis on the determinants of space-startup financing, graded 10/10.
+\end{cvitems}
+
+% ================= PROFESSIONAL EXPERIENCE =================
+\section{Professional experience}
+\textbf{Veritran}.\entrydate{2022--2023}\\
+\textit{Finance Analyst Jr.}
+\begin{cvitems}
+  \item Managed accounts payable operations for subsidiaries across Latin America, the US, and Europe,
+        ensuring accurate and timely processing.
+  \item Maintained and updated financial databases and records in NetSuite, supporting reporting and
+        month-end close.
+\end{cvitems}
+
+% ================= RESEARCH / DATA ANALYSIS EXPERIENCE =================
+\section{Research \&\\data analysis}
+\textbf{Instituto Interdisciplinario de Economía Política (IIEP)}.\entrydate{2024--2026}\\
+\textit{Research Assistant.}
+\begin{cvitems}
+  \item Built a financial database of 156 multilatinas for an IDB-funded study on regional expansion (\href{https://publications.iadb.org/es/multilatinas-en-movimiento-caracteristicas-motivaciones-y-lineamientos-de-politica}{Blyde et al., 2025}).
+  \item Applied network-based statistical models (ERGM, QAP) in R to analyze firm-level data on knowledge transfer across technology clusters.
+  \item Contributed to research and writing on the history of the Argentine space sector.
+\end{cvitems}
+
+\smallskip
+\textbf{Independent project}, with Paulo Pascuini.\entrydate{2025--Present}
+\begin{cvitems}
+  \item Analysis of financing patterns across 170 nanosatellite startups and 410 investment rounds, studying the role of vertical integration and investor profiles.
+\end{cvitems}
+
+% ================= TEACHING =================
+\section{Teaching \&\\mentoring}
+\textbf{Teaching Assistant}, Universidad de San Andrés and Universidad de Buenos Aires.\entrydate{2022--Present}
+\begin{cvitems}
+  \item Seven semesters as teaching assistant across five economics courses (Microeconomics I \& II, International Economics, Financial Economics, Economic Development), preparing materials, leading lectures and grading.
+\end{cvitems}
+
+% ================= SKILLS =================
+\section{Computer skills}
+    R, Python. Familiar with SQL, Stata, Tableau Public. Some public projects on \href{https://www.github.com/sanarovaz/}{GitHub}.
+\section{Languages}
+Spanish (native). English (advanced): Cambridge CAE, score 198, 2017.
+
+\end{document}
